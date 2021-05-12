@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: easyshop-service-brand
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: asus
+Implementation-Vendor-Id: com.pursue.easyshop
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/easyshop-par
+ ent/easyshop-service-brand/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

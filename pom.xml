@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.pursue.easyshop</groupId>
+	<artifactId>easyshop-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<!-- 集中定义依赖版本号 -->
+	<properties>
+		<cglib-version>2.1_3</cglib-version>
+		<mybatis-plus.version>2.3</mybatis-plus.version>
+		<mysql-version>5.1.28</mysql-version>
+		<druid-version>1.1.10</druid-version>
+		<springboot-dubbox>1.0.0</springboot-dubbox>
+		<spring-boot.version>1.5.2.RELEASE</spring-boot.version>
+		<spring-version>4.3.7.RELEASE</spring-version>
+		<junit-version>4.12</junit-version>
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+
+	<!-- 父工程管理依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- SpringBoot的Web启动器 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<!-- 后期的事物管理器 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>${cglib-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.2</version>
+			</dependency>
+
+			<!-- Mybatis plus -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+
+			<!-- mysql -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid-version}</version>
+			</dependency>
+
+			<!-- SpringBoot事物管理器 自动配置 DataSourceTransactionManager -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jdbc</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<!-- 单元测试 -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- Spring Boot Dubbo 依赖 -->
+			<dependency>
+				<groupId>io.dubbo.springboot</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>${springboot-dubbox}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>easyshop-bean</module>
+		<module>easyshop-mapper</module>
+		<module>easyshop-common</module>
+		<module>easyshop-web-admin</module>
+		<module>easyshop-serviceimpl-user</module>
+		<module>easyshop-service-user</module>
+		<module>easyshop-service-brand</module>
+		<module>easyshop-serviceimpl-brand</module>
+		<module>easyshop-web-brand</module>
+		<module>easyshop-service-content</module>
+		<module>easyshop-serviceimpl-content</module>
+		<module>easyshop-web-content</module>
+		<module>easyshop-service-content_category</module>
+		<module>easyshop-serviceimpl-content_category</module>
+		<module>easyshop-web-content_category</module>
+	</modules>
+</project>
