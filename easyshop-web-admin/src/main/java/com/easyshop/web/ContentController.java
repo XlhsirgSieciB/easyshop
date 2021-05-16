@@ -64,6 +64,7 @@ public class ContentController {
 		model.addAttribute("pageBean", pageBean);
 		model.addAttribute("hasNext", result.hasNext());
 		model.addAttribute("hasPrevious", result.hasPrevious());
+		System.out.println("22");
 		return "/advertising";
 	}
 }
