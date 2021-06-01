@@ -14,6 +14,7 @@ import com.easyshop.service.ContentCategoryService;
 import com.easyshop.service.ContentService;
 import com.easyshop.utils.PageHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,8 +65,8 @@ public class ContentController {
 		model.addAttribute("pageBean", pageBean);
 		model.addAttribute("hasNext", result.hasNext());
 		model.addAttribute("hasPrevious", result.hasPrevious());
-		System.out.println("4353");
-		System.out.println("22");
+		System.out.println("刘军是个hmp");
+		ArrayList<Object> arrayList = new ArrayList<>();
 		return "/advertising";
 	}
 }
